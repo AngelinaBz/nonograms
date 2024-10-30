@@ -1,0 +1,211 @@
+.body {
+    font-family: 'Press Start 2P', system-ui;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    margin: 0;
+    gap: 30px;
+}
+.dark {
+    background-color: rgb(99,97,92);
+    color: white;
+}
+.light {
+    background-color: #fde6b4;
+    color: black;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.main {
+    display: flex;
+    padding: 20px 20px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.main_light {
+    background-color: #f5f1e8;
+}
+.main_dark {
+    background-color: rgb(161,158,150);
+}
+.header__title {
+    margin: 0;
+    font-size: 72px;
+    font-weight: 600;
+}
+.header__title_light {
+    color: rgb(234, 138, 36);
+}
+.header__title_dark {
+    color: rgb(245,241,232);
+}
+.level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.game {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+    cursor: default;
+    position: relative;
+}
+.table-result__td {
+    padding: 15px;
+}
+.black {
+    background-color: #000;
+}
+.cross::before,
+.cross::after {
+	content: '';
+    position: absolute;
+	display: block;
+	width: 60%;
+	height: 3px;
+	background: #000;
+    top: 48%;
+    left: 25%;
+}
+.cross:before {
+	transform: rotate(45deg);
+}
+.cross:after {
+	transform: rotate(-45deg);
+}
+.game__watch {
+    font-size: 24px;
+    font-weight: 600;
+}
+.mute__img {
+    width: 30px;
+}
+.lock {
+    overflow: hidden;
+}
+.modal {
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    background-color: rgba(64, 63, 61, 0.80);
+    pointer-events: none;
+    overflow-y: auto;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    padding: 20px 20px;
+}
+.modal__main {
+    position: relative;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    color: black;
+}
+.modal__main_light {
+    background-color: rgb(245,241,232);
+}
+.modal__main_dark {
+    background-color: rgb(161,158,150);
+}
+.modal__text {
+    margin: 0;
+    line-height: 2;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
+.button {
+    width: 150px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: black;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.button_light {
+    background-color: #cce6ff;
+    border: 2px solid #10a4fe;
+}
+.button_dark {
+    background-color: rgb(245,241,232);
+    border: 2px solid rgb(80, 78, 74);
+}
+.choosed {
+    background-color: #d3ffcc;
+    border: 2px solid #10fe6f;
+}
+.choosed[disabled] {
+    pointer-events: none;
+}
+.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+.unactive {
+    pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+    .header__title {
+        font-size: 9vw;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 680px) {
+    .body, .header, .menu {
+        gap: 10px;
+    }
+    .main {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .level {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
